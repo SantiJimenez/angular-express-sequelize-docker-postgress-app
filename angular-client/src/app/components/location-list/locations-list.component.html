@@ -1,0 +1,32 @@
+<div class="list row">
+  <div class="col-md-6">
+    <h4>Lugares</h4>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let location of locations; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveLocation(location, i)"
+      >
+        {{ location.name }}
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <div *ngIf="currentLocation">
+      <h4>Lugar</h4>
+      <div>
+        <label><strong>name:</strong></label> {{ currentLocation.name }}
+      </div>
+      <div>
+        <label><strong>Area en m2:</strong></label>
+        {{ currentLocation.area_m2 }}
+      </div>
+    </div>
+
+    <div *ngIf="!currentLocation">
+      <br />
+      <p>Seleccione un lugar para ver sus detalles...</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="submit-form">
+  <div *ngIf="!submitted">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        required
+        [(ngModel)]="location.name"
+        name="name"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="area">Area en m2</label>
+      <input
+        class="form-control"
+        id="area"
+        required
+        [(ngModel)]="location.area"
+        name="area"
+      />
+    </div>
+
+    <button (click)="saveLocation()" class="btn btn-success">Guardar</button>
+  </div>
+
+  <div *ngIf="submitted">
+    <h4>Se ha creado un nuevo lugar!</h4>
+    <button class="btn btn-success" (click)="newLocation()">Nuevo</button>
+  </div>
+</div>
