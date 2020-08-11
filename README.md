@@ -1,6 +1,4 @@
-# Prueba Banco de Bogota
-
-Aplicación web de registro de ubicaciones
+# Aplicación web de registro de ubicaciones
 
 ## Tech!
   - [Angular](https://angular.io/) - Frontend
